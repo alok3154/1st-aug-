@@ -6,7 +6,10 @@
 <title>A Special Surprise ❤️</title>
 </head>
 
-<body style="background:#fff0f6;font-family:Arial,sans-serif;margin:0;padding:30px;display:flex;justify-content:center;align-items:center;min-height:100vh;">
+<body style="margin:0;font-family:Arial,sans-serif;background:#fff0f6;">
+
+<!-- PAGE 1 -->
+<div id="page1" style="display:flex;justify-content:center;align-items:center;min-height:100vh;padding:30px;">
 
 <div style="max-width:500px;background:white;padding:35px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.15);">
 
@@ -14,7 +17,7 @@
 ❤️ A Special Surprise ❤️
 </h1>
 
-<p style="font-size:20px;line-height:1.8;color:#555;">
+<p style="font-size:20px;color:#555;">
 Hi Bachha... 🌸
 </p>
 
@@ -28,6 +31,7 @@ I just want you to know that every word inside this website comes straight from 
 </p>
 
 <input
+id="password"
 type="password"
 placeholder="Enter Password"
 style="width:90%;padding:15px;font-size:18px;border-radius:12px;border:1px solid #ccc;">
@@ -35,106 +39,59 @@ style="width:90%;padding:15px;font-size:18px;border-radius:12px;border:1px solid
 <br><br>
 
 <button
-style="padding:15px 35px;font-size:18px;background:#e91e63;color:white;border:none;border-radius:30px;">
+onclick="checkPassword()"
+style="padding:15px 35px;font-size:18px;background:#e91e63;color:white;border:none;border-radius:30px;cursor:pointer;">
 Unlock My Heart ❤️
 </button>
 
+<p id="error" style="color:red;margin-top:15px;"></p>
+
 </div>
 
-</body>
-</html>
-<!-- ================= PAGE 2 ================= -->
+</div>
 
-<div id="page2" style="display:none;background:#fff4f8;min-height:100vh;padding:30px;font-family:Arial,sans-serif;line-height:2;">
+<!-- PAGE 2 -->
 
-<h1 style="text-align:center;color:#e91e63;font-size:38px;">
+<div id="page2" style="display:none;padding:30px;min-height:100vh;background:#fff4f8;">
+
+<h1 style="text-align:center;color:#e91e63;">
 💌 A Letter For My Bachha ❤️
 </h1>
 
-<hr>
-
-<p style="font-size:21px;color:#444;">
-
-Hi Bachha... ❤️
-
-Sabse pehle...
-
-Happy Girlfriend's Day. 🌹
-
-Pata nahi tum is website ko padhte waqt smile kar rahi hogi ya sirf curiosity se dekh rahi hogi...
-
-Lekin jo bhi likha hai...
-Wo sab mere dil se likha hai.
-
-Kabhi-kabhi hum dono bahut chhoti baaton par lad jaate hain...
-
-Kabhi tum gussa ho jaati ho...
-
-Kabhi main zid kar leta hoon...
-
-Aur kabhi meri ego itni badh jaati hai ki main bhi chup ho jaata hoon.
-
-Sach bolun...
-
-Mujhe tumhara gussa utna bura nahi lagta...
-
-Jitna tumhara mujhse baat na karna bura lagta hai.
-
-Jab tum reply nahi karti...
-
-Ya "hmm" likhkar chali jaati ho...
-
-Tab sach me pura din ajeeb sa lagta hai.
-
-Main shayad har baar apni feelings sahi tareeke se express nahi kar pata...
-
-Kabhi words kam pad jaate hain...
-
-Kabhi ego beech me aa jaata hai...
-
-Lekin iska matlab kabhi ye nahi hota ki meri feelings kam ho gayi hain.
-
-Bachha...
-
-Tum meri life ka bahut important hissa ho.
-
-Tumhari hasi dekhkar mujhe sukoon milta hai.
-
-Tumhari care mujhe special feel karwati hai.
-
-Aur tumhara hona hi meri life ko beautiful banata hai.
-
-Agar kabhi meri kisi baat se tum hurt hui ho...
-
-To dil se Sorry. ❤️
-
-Main perfect insaan nahi hoon...
-
-Lekin tumhare liye better insaan banne ki hamesha koshish karta rahunga.
-
-Bas itna yaad rakhna...
-
-Ladai chahe kitni bhi ho...
-
-Narazgi kitni bhi ho...
-
-Din ke end me meri favourite person sirf tum hi rahogi.
-
-❤️
-
+<p style="font-size:22px;text-align:center;">
+🎉 Password Accepted ❤️
 </p>
 
-<div style="text-align:center;margin-top:40px;">
+<p style="font-size:19px;line-height:2;color:#444;">
+Congratulations... ❤️<br><br>
 
-<button onclick="showPage(3)"
-style="padding:16px 40px;font-size:20px;background:#e91e63;color:white;border:none;border-radius:40px;">
+Tumne password sahi dala.
 
-Continue ❤️
-
-</button>
-
-</div>
+Ab asli surprise shuru hota hai...
+</p>
 
 </div>
 
-<!-- ================= END PAGE 2 ================= -->
+<script>
+
+function checkPassword(){
+
+var pass=document.getElementById("password").value;
+
+if(pass==="bachha"){
+
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="block";
+
+}else{
+
+document.getElementById("error").innerHTML="❌ Wrong Password";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
