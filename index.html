@@ -1,76 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Special Surprise ❤️</title>
+<title>Password Test</title>
 </head>
 
-<body style="margin:0;font-family:Arial,sans-serif;background:#fff0f6;">
+<body>
 
-<!-- PAGE 1 -->
-<div id="page1" style="display:flex;justify-content:center;align-items:center;min-height:100vh;padding:30px;">
+<div id="page1">
 
-<div style="max-width:500px;background:white;padding:35px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.15);">
+<h1>Page 1</h1>
 
-<h1 style="color:#e91e63;font-size:36px;">
-❤️ A Special Surprise ❤️
-</h1>
+<p>Enter Password</p>
 
-<p style="font-size:20px;color:#555;">
-Hi Bachha... 🌸
-</p>
+<input type="password" id="password">
 
-<p style="font-size:18px;line-height:1.8;color:#666;">
-Before you enter this little surprise,
-I just want you to know that every word inside this website comes straight from my heart.
-</p>
+<button type="button" onclick="checkPassword()">Open Page 2</button>
 
-<p style="font-size:18px;color:#ff4081;">
-✨ Please enter the password to continue ✨
-</p>
-
-<input
-id="password"
-type="password"
-placeholder="Enter Password"
-style="width:90%;padding:15px;font-size:18px;border-radius:12px;border:1px solid #ccc;">
-
-<br><br>
-
-<button
-onclick="checkPassword()"
-style="padding:15px 35px;font-size:18px;background:#e91e63;color:white;border:none;border-radius:30px;cursor:pointer;">
-Unlock My Heart ❤️
-</button>
-
-<p id="error" style="color:red;margin-top:15px;"></p>
+<p id="error" style="color:red;"></p>
 
 </div>
 
-</div>
 
-<!-- PAGE 2 -->
+<div id="page2" style="display:none;">
 
-<div id="page2" style="display:none;padding:30px;min-height:100vh;background:#fff4f8;">
+<h1>🎉 Page 2 Open Ho Gaya ❤️</h1>
 
-<h1 style="text-align:center;color:#e91e63;">
-💌 A Letter For My Bachha ❤️
-</h1>
-
-<p style="font-size:22px;text-align:center;">
-🎉 Password Accepted ❤️
-</p>
-
-<p style="font-size:19px;line-height:2;color:#444;">
-Congratulations... ❤️<br><br>
-
-Tumne password sahi dala.
-
-Ab asli surprise shuru hota hai...
-</p>
+<p>Agar ye dikh raha hai to password perfectly work kar raha hai.</p>
 
 </div>
+
 
 <script>
 
@@ -78,14 +38,15 @@ function checkPassword(){
 
 var pass=document.getElementById("password").value;
 
-if(pass==="bachha"){
+if(pass=="bachha"){
 
 document.getElementById("page1").style.display="none";
+
 document.getElementById("page2").style.display="block";
 
 }else{
 
-document.getElementById("error").innerHTML="❌ Wrong Password";
+document.getElementById("error").innerHTML="Wrong Password";
 
 }
 
