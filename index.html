@@ -3,38 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Special Surprise ❤️</title>
+<title>A Special Surprise ❤️</title>
 </head>
 
-<body style="margin:0;font-family:Arial;background:#fff0f6;">
+<body style="margin:0;padding:0;background:#fff0f6;font-family:Arial,sans-serif;">
 
 <!-- PAGE 1 -->
+
 <div id="page1" style="display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;">
 
-<div style="max-width:500px;width:100%;background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.15);text-align:center;">
+<div style="max-width:550px;width:100%;background:white;border-radius:25px;padding:35px;box-shadow:0 15px 35px rgba(0,0,0,.15);text-align:center;">
 
-<h1 style="color:#e91e63;">❤️ A Special Surprise ❤️</h1>
+<h1 style="color:#e91e63;font-size:38px;margin-bottom:10px;">
+❤️ A Special Surprise ❤️
+</h1>
 
-<p>Hi Bachha... 🌸</p>
-
-<p>
-Before you continue, please enter the password.
+<p style="font-size:22px;color:#ff4081;">
+Hi Bachha... 🌸
 </p>
 
-<input id="password" type="password" placeholder="Enter Password"
-style="width:90%;padding:15px;font-size:18px;border-radius:10px;border:1px solid #ccc;">
+<hr>
+
+<p style="font-size:18px;line-height:1.9;color:#555;">
+
+Aaj ka din mere liye bahut special hai...
+
+Aur shayad tumhare liye bhi ho jaaye,
+agar tum is chhoti si website ko end tak padhogi. ❤️
+
+Yahan jo bhi likha hai...
+
+Wo Google se copy nahi kiya...
+
+Na hi kisi AI se feelings likhwai hain...
+
+Ye sab meri taraf se sirf tumhare liye hai.
+
+Main bas chahta hoon ki...
+
+Aaj ke din tumhare face par ek pyari si smile aa jaaye. 😊
+
+Isliye...
+
+Password enter karo aur meri chhoti si duniya me welcome ho jao. ❤️
+
+</p>
+
+<p style="color:#e91e63;font-size:18px;">
+🔒 Enter Password
+</p>
+
+<input
+id="password"
+type="password"
+placeholder="Enter Password"
+style="width:90%;padding:15px;font-size:18px;border-radius:12px;border:1px solid #ccc;outline:none;">
 
 <br><br>
 
-<button type="button"
+<button
+type="button"
 onclick="checkPassword()"
-style="padding:15px 35px;font-size:18px;background:#e91e63;color:white;border:none;border-radius:30px;">
-Unlock ❤️
+style="padding:15px 40px;font-size:18px;background:#e91e63;color:white;border:none;border-radius:35px;cursor:pointer;">
+
+Unlock My Heart ❤️
+
 </button>
 
-<p id="error" style="color:red;"></p>
+<p id="error" style="color:red;margin-top:15px;font-size:18px;"></p>
 
 </div>
+
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" style="display:none;padding:30px;background:#fff4f8;min-height:100vh;">
+
+<h1 style="text-align:center;color:#e91e63;">
+💌 Welcome Bachha ❤️
+</h1>
+
+<p style="text-align:center;font-size:22px;">
+🎉 Password Accepted 🎉
+</p>
+
+<p style="font-size:20px;line-height:2;text-align:center;">
+Ab asli surprise shuru hota hai... ❤️
+</p>
+
+</div>
+
+<script>
+
+function checkPassword(){
+
+var pass=document.getElementById("password").value.trim();
+
+if(pass==="bachha"){
+
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="block";
+
+}else{
+
+document.getElementById("error").innerHTML="❌ Wrong Password";
+
+}
+
+}
+
+</script>
+
+</body>
+</html></div>
 
 </div>
 
