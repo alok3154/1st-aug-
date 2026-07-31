@@ -150,21 +150,28 @@ Continue ❤️
 
 
 
-function checkPassword(){
+<script>
 
-var pass=document.getElementById("password").value.trim();
+function checkPassword() {
 
-if(pass==="bachha"){
+    var pass = document.getElementById("password").value.trim();
 
-document.getElementById("page1").style.display="none";
+    if (pass.toLowerCase() === "bachha") {
 
-document.getElementById("page2").style.display="block";
+        document.getElementById("page1").style.display = "none";
+        document.getElementById("page2").style.display = "block";
 
-}else{
+    } else {
 
-document.getElementById("error").innerHTML="Wrong Password ❤️";
+        document.getElementById("error").innerHTML = "❌ Wrong Password";
 
+    }
 }
+
+function showPage(current, next) {
+
+    document.getElementById(current).style.display = "none";
+    document.getElementById(next).style.display = "block";
 
 }
 
