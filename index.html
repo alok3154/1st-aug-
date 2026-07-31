@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Special Surprise ❤️</title>
+<title>A baby ko Special Surprise ❤️</title>
 </head>
 
 <body style="margin:0;padding:0;background:#fff0f6;font-family:Arial,sans-serif;">
@@ -153,23 +153,13 @@ Continue ❤️
 
 <script>
 
-function checkPassword() {
+function showPage(current,next){
 
-    var pass = document.getElementById("password").value.trim();
+document.getElementById(current).style.display="none";
 
-    if (pass.toLowerCase() === "bachha") {
+document.getElementById(next).style.display="block";
 
-        document.getElementById("page1").style.display = "none";
-        document.getElementById("page2").style.display = "block";
-
-    } else {
-
-        document.getElementById("error").innerHTML = "❌ Wrong Password";
-
-    }
 }
-
-function showPage(current, next) {
 
     document.getElementById(current).style.display = "none";
     document.getElementById(next).style.display = "block";
